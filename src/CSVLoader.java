@@ -8,27 +8,27 @@ import java.util.List;
 
 public class CSVLoader {
 
-    File file;
+    private File file;
 
     public CSVLoader(String path) {
         this.file = new File(path);
     }
 
+    /**
+     * Reads the CSV file and returns a List of strings representing each row
+     * @return A List of strings representing each row
+     */
     public List<List<String>> read() {
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-//            StringBuffer stringBuffer = new StringBuffer();
-
 
             // Array that contains all the rows
             List<List<String >> csvRows = new ArrayList<>();
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-//                stringBuffer.append(line);
-//                stringBuffer.append("\n");
+
 
                 String[] row = line.split(",");
                 List<String> currentRow = Arrays.asList(row);
@@ -37,8 +37,6 @@ public class CSVLoader {
             }
 
             fileReader.close();
-
-//            System.out.println(stringBuffer.toString());
 
             return csvRows;
 
