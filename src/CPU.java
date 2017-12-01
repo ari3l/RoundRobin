@@ -45,11 +45,18 @@ public class CPU {
             /**
              * Capture arriving processes and add them to the queue
              */
-            Process arriving = dataSource.processArrive(time);
+            Queue<Process> arriving = dataSource.arrivingProcesses(time);
 
             if (arriving != null)
             {
-                requestQueue.add(arriving);
+                Iterator<Process> arrivingProcessIterator = arriving.iterator();
+
+                while (arrivingProcessIterator.hasNext())
+                {
+                    Process p = arrivingProcessIterator.next();
+                    requestQueue.add(p);
+                    arrivingProcessIterator.remove();
+                }
             }
 
             /**
