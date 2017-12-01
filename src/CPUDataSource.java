@@ -9,20 +9,7 @@ import java.util.Map;
 public class CPUDataSource {
 
     Map<Integer, Process> processMap;
-
-//    public CPUDataSource(List<Process> processes) {
-//        this.processes = processes;
-//        this.processMap = new HashMap<>();
-//
-//        Iterator<Process> processIterator = processes.iterator();
-//        while (processIterator.hasNext()) {
-//            Process process = processIterator.next();
-//            int arrivalTime = process.getArrivalTime();
-//            processMap.put(arrivalTime, process);
-//        }
-//    }
-
-
+    
     /**
      * Constructor to be used for CSV fies List from CSVLoader
      */
