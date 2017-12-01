@@ -65,9 +65,9 @@ public class CPU {
             }
 
             execute(p);
+            System.out.println("time = " + time + " P" + p.getID() + " is running");
             currentRemainingQauntum--;
             time++;
-            System.out.println("time = " + time + " P" + p.getID() + " is running");
             utilization++;
 
             /**
