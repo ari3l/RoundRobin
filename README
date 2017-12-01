@@ -1,0 +1,6 @@
+To run the program, cd into the src directory and run the following make commands
+-> cd src
+-> make
+-> make exec
+
+You can modify makefile in the src directory to change the quantum and csv file as needed.
